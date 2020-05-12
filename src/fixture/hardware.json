@@ -1,0 +1,14 @@
+[
+    {
+        "id": "1",
+        "name": "LegacyGate",
+        "result": "OK",
+        "message": "Pin Mandatory"
+    },
+    {
+        "id": "2",
+        "name": "CloudGate",
+        "result": "OK",
+        "message": ""
+    },
+]

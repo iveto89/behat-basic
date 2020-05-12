@@ -1,0 +1,42 @@
+version: '3'
+
+services:
+  web:
+    image: php:7.3-apache-buster
+    ports:
+      - 80:80
+    environment:
+      DB_HOST: db
+      DB_USER: exampleuser
+      DB_PASSWORD: examplepass
+      DB_NAME: exampledb
+    volumes:
+      - ../src:/var/www/html
+  selenium:
+    image: selenium/standalone-chrome:3.4.0-chromium
+    environment:
+      JAVA_ENV: "-Xms1g -Xmx4g"
+      DBUS_SESSION_BUS_ADDRESS: /dev/null
+    ports:
+      - 4444:4444
+    links: 
+      - web
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: exampledb
+      MYSQL_USER: exampleuser
+      MYSQL_PASSWORD: examplepass
+      MYSQL_RANDOM_ROOT_PASSWORD: '1'
+    volumes:
+      - /tmp/demo/db:/var/lib/mysql
+      - ./data:/docker-entrypoint-initdb.d
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin_testing
+    ports:
+      - 8090:80
+    links:
+      - db
+    depends_on:
+      - db

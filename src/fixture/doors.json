@@ -1,0 +1,46 @@
+[
+    {
+        "ID": "1",	
+        "parkingId": "1",
+        "Name": "Door 1.1",
+        "lat": "",
+        "long": "",
+        "harwareId": "1",
+        "sim": "",
+        "pin": "",
+        "ip": ""
+    },
+    {
+        "ID": "2",	
+        "parkingId": "1",
+        "Name": "Door 1.2",
+        "lat": "",
+        "long": "",
+        "harwareId": "1",
+        "sim": "",
+        "pin": "",
+        "ip": ""
+    },
+    {
+        "ID": "3",	
+        "parkingId": "2",
+        "Name": "Door 2.1",
+        "lat": "",
+        "long": "",
+        "harwareId": "2",
+        "sim": "",
+        "pin": "",
+        "ip": ""
+    },
+    {
+        "ID": "4",	
+        "parkingId": "3",
+        "Name": "Door 3.2",
+        "lat": "",
+        "long": "",
+        "harwareId": "1",
+        "sim": "",
+        "pin": "",
+        "ip": ""
+    }
+]

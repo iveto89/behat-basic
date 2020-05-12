@@ -1,0 +1,23 @@
+[
+    {
+        "id": "1",
+        "Name": "Park 1",
+        "Address": "A street",
+        "ZipCode": "75012",
+        "Country": "BE"
+    },    
+    {
+        "id": "2",
+        "Name": "Park 2",
+        "Address": "B street",
+        "ZipCode": "4000",
+        "Country": "FR"
+    },    
+    {
+        "id": "3",
+        "Name": "Park 3",
+        "Address": "C street",
+        "ZipCode": "3841",
+        "Country": "LU"
+    }
+]
