@@ -49,4 +49,21 @@ class CommentContext extends MinkContext implements Context {
         echo "comment : " . $this->getComment() . "\n";
         $this->assertSession()->responseContains($this->fixStepArgument($this->getComment()));
     }
+
+	/**
+	 * @Then I should see :address in the title attribute
+	 */
+    public function iSeeTitleInElement($address)
+    {
+    	$element = $this->getSession()->getPage()->find('css', 'address');
+
+    	if ($element !== null)
+	    {
+		    $this->assertSession()->elementAttributeContains($element, $address);
+	    }
+    	else
+	    {
+	    	throw new \Exception('No address element found.');
+	    }
+    }
 }
